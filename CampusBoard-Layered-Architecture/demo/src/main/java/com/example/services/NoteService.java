@@ -1,10 +1,10 @@
 package com.example.services;
 
 import com.example.entities.Note;
-import com.example.dto.NoteDTO;
-import com.example.dto.CreateNoteRequest;
-import com.example.dto.UpdateNoteRequest;
-import com.example.repository.NoteRepository;
+import com.example.DTO.NoteDTO;
+import com.example.DTO.CreateNoteRequest;
+import com.example.DTO.UpdateNoteRequest;
+import com.example.repositories.NoteRepository;
 import com.example.exception.ResourceNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
