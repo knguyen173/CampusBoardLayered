@@ -1,0 +1,139 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Login Page Styles */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1A4A46;
+    color: #F0D8A8;
+    padding: 20px;
+}
+
+.login-container h1 {
+    margin-bottom: 60px;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #E8E8E8;
+    font-size: 16px;
+}
+
+.login-btn {
+    background-color: #F0D8A8;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 0;
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    text-align: center;
+}
+
+.forgot-password a {
+    color: #F0D8A8;
+    text-decoration: none;
+}
+
+/* Dashboard Page Styles */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #F5F5F5;
+    padding: 20px 0;
+    border-right: 1px solid #E0E0E0;
+}
+
+.home-icon {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.home-icon svg {
+    color: #333;
+}
+
+.notes-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.note-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #E0E0E0;
+    cursor: pointer;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #D6E6E6;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #C0D0D0;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    color: #1A4A46;
+    font-weight: normal;
+}
+
+.calendar-icon svg {
+    color: #333;
+}
+
+.new-note-btn {
+    background-color: #1A4A46;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
