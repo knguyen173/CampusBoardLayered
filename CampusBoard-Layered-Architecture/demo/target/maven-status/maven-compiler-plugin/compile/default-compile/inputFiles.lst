@@ -1,0 +1,16 @@
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\controllers\NoteController.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\controllers\TaskController.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\demo\DemoApplication.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\DTO\CreateNoteRequest.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\DTO\CreateTaskRequest.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\DTO\NoteDTO.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\DTO\TaskDTO.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\DTO\UpdateNoteRequest.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\DTO\UpdateTaskRequest.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\entities\Note.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\entities\Task.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\exception\ResourceNotFoundException.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\repositories\NoteRepository.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\repositories\TaskRepository.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\services\NoteService.java
+C:\Users\kathy\Downloads\CampusBoardLayered\CampusBoard-Layered-Architecture\demo\src\main\java\com\example\services\TaskService.java
