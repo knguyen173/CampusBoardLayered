@@ -1,13 +1,12 @@
 package com.example.controllers;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.concurrent.ThreadLocalRandom;
+//import java.util.concurrent.ThreadLocalRandom;
 import com.example.DTO.NoteDTO;
 import com.example.DTO.CreateNoteRequest;
 import com.example.DTO.UpdateNoteRequest;
 import com.example.services.NoteService;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +22,6 @@ public class NoteController {
     private static final Logger logger = LoggerFactory.getLogger(NoteController.class);
     private final NoteService noteService;
     
-    @Autowired
     public NoteController(NoteService noteService) {
         this.noteService = noteService;
     }

@@ -1,7 +1,5 @@
 package com.example.DTO;
 
-import java.util.Date;
-
 public class CreateTaskRequest {
     private Long userId;
     private String title;

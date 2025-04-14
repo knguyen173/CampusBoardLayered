@@ -1,7 +1,5 @@
 package com.example.DTO;
 
-import java.util.Date;
-
 public class UpdateNoteRequest {
     private String title;
     private String content;

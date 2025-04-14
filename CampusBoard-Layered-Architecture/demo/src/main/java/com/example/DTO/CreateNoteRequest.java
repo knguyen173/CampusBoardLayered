@@ -1,6 +1,5 @@
 package com.example.DTO;
 
-import java.util.Date;
 
 public class CreateNoteRequest {
     private Long userId;

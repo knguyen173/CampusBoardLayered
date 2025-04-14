@@ -7,13 +7,13 @@ import com.example.DTO.UpdateNoteRequest;
 import com.example.repositories.NoteRepository;
 import com.example.exception.ResourceNotFoundException;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -22,7 +22,6 @@ public class NoteService {
     private static final Logger logger = LoggerFactory.getLogger(NoteService.class);
     private final NoteRepository noteRepository;
     
-    @Autowired
     public NoteService(NoteRepository noteRepository) {
         this.noteRepository = noteRepository;
     }
@@ -46,8 +45,8 @@ public class NoteService {
     }
     
     public NoteDTO getNoteById(Long id) {
-        Note note = noteRepository.findById(id)
-            .orElseThrow(() -> new ResourceNotFoundException("Note not found with id: " + id));
+        Optional<Note> noteOptional = noteRepository.findById(id);
+        Note note = noteOptional.orElseThrow(() -> new ResourceNotFoundException("Note not found with id: " + id));
         return convertToDTO(note);
     }
 
@@ -72,8 +71,8 @@ public class NoteService {
     public NoteDTO updateNote(Long id, UpdateNoteRequest updateNoteRequest) {
         logger.info("Updating note ID {} with data: {}", id, updateNoteRequest);
         
-        Note note = noteRepository.findById(id)
-            .orElseThrow(() -> new ResourceNotFoundException("Note not found with id: " + id));
+        Optional<Note> noteOptional = noteRepository.findById(id);
+        Note note = noteOptional.orElseThrow(() -> new ResourceNotFoundException("Note not found with id: " + id));
             
         if (updateNoteRequest.getTitle() != null) {
             note.setTitle(updateNoteRequest.getTitle());

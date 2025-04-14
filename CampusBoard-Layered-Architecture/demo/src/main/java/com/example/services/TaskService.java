@@ -7,11 +7,11 @@ import com.example.DTO.UpdateTaskRequest;
 import com.example.repositories.TaskRepository;
 import com.example.exception.ResourceNotFoundException;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -19,7 +19,6 @@ public class TaskService {
 
     private final TaskRepository taskRepository;
     
-    @Autowired
     public TaskService(TaskRepository taskRepository) {
         this.taskRepository = taskRepository;
     }
@@ -45,8 +44,10 @@ public class TaskService {
     }
     
     public TaskDTO getTaskById(Long id) {
-        Task task = taskRepository.findById(id)
-            .orElseThrow(() -> new ResourceNotFoundException("Task not found with id: " + id));
+        
+        Optional<Task> taskOptional = taskRepository.findById(id);
+        Task task = taskOptional.orElseThrow(() -> new ResourceNotFoundException("Task not found with id: " + id));
+            
         return convertToDTO(task);
     }
     
@@ -63,9 +64,9 @@ public class TaskService {
     }
     
     @Transactional
-    public TaskDTO updateTask(Long id, UpdateTaskRequest updateTaskRequest) {
-        Task task = taskRepository.findById(id)
-            .orElseThrow(() -> new ResourceNotFoundException("Task not found with id: " + id));
+    public TaskDTO updateTask(Long id, UpdateTaskRequest updateTaskRequest) {     
+        Optional<Task> taskOptional = taskRepository.findById(id);
+        Task task = taskOptional.orElseThrow(() -> new ResourceNotFoundException("Task not found with id: " + id));
             
         if (updateTaskRequest.getTitle() != null) {
             task.setTitle(updateTaskRequest.getTitle());
